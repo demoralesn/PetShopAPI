@@ -53,7 +53,7 @@ namespace PetShopAPI.Controllers
             }
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> DeletePet(int id)
         {
             try
