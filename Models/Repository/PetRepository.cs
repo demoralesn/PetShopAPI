@@ -16,5 +16,41 @@ namespace PetShopAPI.Models.Repository
         {
             return await _context.Pets.ToListAsync();
         }
+
+        public async Task<Pet> GetPetById(int id)
+        {
+            return await _context.Pets.FindAsync(id);
+        }
+
+        public async Task RemovePet(Pet pet)
+        {
+            _context.Pets.Remove(pet);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task<Pet> AddPet(Pet pet)
+        {
+            _context.Add(pet);
+            await _context.SaveChangesAsync();
+
+            return (pet);
+        }
+
+        public async Task UpdatePet(Pet pet)
+        {
+            var petCheck = await _context.Pets.FirstOrDefaultAsync(x => x.Id == pet.Id);
+
+            if (petCheck != null)
+            {
+                petCheck.Name = pet.Name;
+                petCheck.CreationDate = DateTime.Now;
+                petCheck.Color = pet.Color;
+                petCheck.Race = pet.Race;
+                petCheck.Age = pet.Age;
+                petCheck.Weight = pet.Weight;
+
+                await _context.SaveChangesAsync();
+            }
+        }
     }
 }

@@ -38,98 +38,109 @@ namespace PetShopAPI.Controllers
             }
         }
 
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> Get(int id)
-        //{
-        //    try
-        //    {
-        //        Thread.Sleep(2000);
-        //        var petDetails = await _context.Pets.FindAsync(id);
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            try
+            {
+                Thread.Sleep(2000);
+                var petDetails = await _petRepository.GetPetById(id);
 
-        //        var petDto = _mapper.Map<PetDTO>(petDetails);
+                if (petDetails != null)
+                {
+                    var petDto = _mapper.Map<PetDTO>(petDetails);
 
-        //        if (petDetails != null)
-        //        {
-        //            return Ok(petDto);
-        //        }
-        //        else
-        //        {
-        //            return NotFound();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest($"{ex.Message}");
-        //    }
-        //}
+                    return Ok(petDto);
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+        }
 
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> DeletePet(int id)
-        //{
-        //    try
-        //    {
-        //        Thread.Sleep(2000);
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePet(int id)
+        {
+            try
+            {
+                Thread.Sleep(2000);
 
-        //        var petCheck = await _context.Pets.FindAsync(id);
+                var petCheck = await _petRepository.GetPetById(id);
 
-        //        if (petCheck != null)
-        //        {
-        //            _context.Pets.Remove(petCheck);
-        //            await _context.SaveChangesAsync();
+                if (petCheck != null)
+                {
+                    await _petRepository.RemovePet(petCheck);
 
-        //            return Ok();
-        //        }
-        //        else
-        //        {
-        //            return NotFound();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest($"{ex.Message}");
-        //    }
-        //}
+                    return NoContent();
+                }
+                else
+                {
+                    return NotFound();
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+        }
 
-        //[HttpPost]
-        //public async Task<IActionResult> AddPet(PetDTO petDto)
-        //{
-        //    try
-        //    {
-        //        var pet = _mapper.Map<Pet>(petDto);
-        //        pet.CreationDate = DateTime.Now;
-        //        _context.Add(pet);
-        //        await _context.SaveChangesAsync();
-        //        var petSaved = _mapper.Map<PetDTO>(pet);
+        [HttpPost]
+        public async Task<IActionResult> AddPet(PetDTO petDto)
+        {
+            try
+            {
+                var pet = _mapper.Map<Pet>(petDto);
+                pet.CreationDate = DateTime.Now;
 
-        //        return CreatedAtAction("Get", new { id = pet.Id }, petSaved);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest($"{ex.Message}");
-        //    }
-        //}
+                pet = await _petRepository.AddPet(pet);
 
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> EditPet(int id, PetDTO petDto)
-        //{
-        //    try
-        //    {
-        //        if (id != petDto.Id)
-        //        {
-        //            return BadRequest();
-        //        }
-        //        else
-        //        {
-        //            var pet = _mapper.Map<Pet>(petDto);
-        //            _context.Update(pet);
-        //            await _context.SaveChangesAsync();
-        //            return NoContent();
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest($"{ex.Message}");
-        //    }
-        //}
+                var petSaved = _mapper.Map<PetDTO>(pet);
+
+                return CreatedAtAction("Get", new { id = pet.Id }, petSaved);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> EditPet(int id, PetDTO petDto)
+        {
+            try
+            {
+                if (id != petDto.Id)
+                {
+                    return BadRequest();
+                }
+                else
+                {
+                    var petCheck = await _petRepository.GetPetById(id);
+
+                    if (petCheck != null)
+                    {
+                        var pet = _mapper.Map<Pet>(petDto);
+
+                        await _petRepository.UpdatePet(pet);
+
+                        return NoContent();
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                    
+                }
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+        }
     }
 }
