@@ -135,3 +135,5 @@ C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PetShopAPI.
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PetShopAPI.genruntimeconfig.cache
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\ref\PetShopAPI.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PetShopAPI.sourcelink.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\AutoMapper.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

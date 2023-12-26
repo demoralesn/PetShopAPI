@@ -28,6 +28,7 @@ builder.Services.AddAutoMapper(typeof(Program));
 
 // Add Services
 builder.Services.AddScoped<IPetRepository, PetRepository>();
+builder.Services.AddScoped<IRaceRepository, RaceRepository>();   
 
 var app = builder.Build();
 

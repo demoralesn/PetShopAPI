@@ -10,5 +10,7 @@ namespace PetShopAPI.Models
         }
 
         public DbSet<Pet> Pets { get; set; }
+
+        public DbSet<Race> Races { get; set; }
     }
 }

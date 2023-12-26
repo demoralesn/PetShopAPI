@@ -4,6 +4,8 @@ C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\PetShopAPI.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\PetShopAPI.runtimeconfig.json
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\PetShopAPI.pdb
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\AutoMapper.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\Azure.Core.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\Azure.Identity.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll

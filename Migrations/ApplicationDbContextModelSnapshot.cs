@@ -55,6 +55,26 @@ namespace PetShopAPI.Migrations
 
                     b.ToTable("Pets");
                 });
+
+            modelBuilder.Entity("PetShopAPI.Models.Race", b =>
+                {
+                    b.Property<int>("RaceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RaceId"));
+
+                    b.Property<bool>("Active")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("RaceId");
+
+                    b.ToTable("Races");
+                });
 #pragma warning restore 612, 618
         }
     }
