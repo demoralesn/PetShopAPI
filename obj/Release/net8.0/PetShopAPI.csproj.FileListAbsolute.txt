@@ -137,3 +137,8 @@ C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\ref\PetShop
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Release\net8.0\PetShopAPI.sourcelink.json
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\AutoMapper.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\web.config
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\appsettings.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\PetShopAPI.deps.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\PetShopAPI.runtimeconfig.json

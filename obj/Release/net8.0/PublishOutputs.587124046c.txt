@@ -1,9 +1,16 @@
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\PetShopAPI.exe
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\publish\web.config
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\appsettings.Development.json
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\appsettings.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\publish\appsettings.Development.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\publish\appsettings.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\publish\PetShopAPI.deps.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\publish\PetShopAPI.runtimeconfig.json
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\PetShopAPI.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\PetShopAPI.runtimeconfig.json
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\PetShopAPI.pdb
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\AutoMapper.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\Azure.Core.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\Azure.Identity.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Release\net8.0\publish\Microsoft.Bcl.AsyncInterfaces.dll

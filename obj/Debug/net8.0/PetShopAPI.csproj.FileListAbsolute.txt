@@ -137,3 +137,12 @@ C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\runtimes\win\
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\obj\Debug\net8.0\PetShopAPI.sourcelink.json
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\publish\web.config
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\publish\appsettings.Development.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\publish\appsettings.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\publish\PetShopAPI.deps.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\publish\PetShopAPI.runtimeconfig.json
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\nlog.config
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\NLog.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\NLog.Extensions.Logging.dll
+C:\Users\intro\source\repos\PetShopAPI\PetShopAPI\bin\Debug\net8.0\NLog.Web.AspNetCore.dll

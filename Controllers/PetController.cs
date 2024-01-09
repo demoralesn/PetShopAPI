@@ -14,11 +14,13 @@ namespace PetShopAPI.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IPetRepository _petRepository;
+        private readonly ILogger<PetController> _logger;
 
-        public PetController(IMapper mapper, IPetRepository petRepository)
+        public PetController(IMapper mapper, IPetRepository petRepository, ILogger<PetController> logger)
         {
             _mapper = mapper;
             _petRepository = petRepository;
+            _logger = logger;
         }
 
         [HttpGet]
@@ -30,6 +32,7 @@ namespace PetShopAPI.Controllers
                 var petList = await _petRepository.GetPetList();
                 var petDtoList = _mapper.Map<IEnumerable<PetDTO>>(petList);
 
+                _logger.LogInformation("Get Pet method called");
                 return Ok(petDtoList);
             }
             catch (Exception ex)
