@@ -32,7 +32,26 @@ namespace PetShopAPI.Controllers
                 var petList = await _petRepository.GetPetList();
                 var petDtoList = _mapper.Map<IEnumerable<PetDTO>>(petList);
 
-                _logger.LogInformation("Get Pet method called");
+                _logger.LogInformation("Get method called");
+                return Ok(petDtoList);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"{ex.Message}");
+            }
+        }
+
+        [Route("List")]
+        [HttpGet]
+        public async Task<IActionResult> GetPetListWithRace()
+        {
+            try
+            {
+                Thread.Sleep(2000);
+                var petList = await _petRepository.GetPetListWithRace();
+                var petDtoList = _mapper.Map<IEnumerable<PetDTO>>(petList);
+
+                _logger.LogInformation("GetPetListWithRace method called");
                 return Ok(petDtoList);
             }
             catch (Exception ex)

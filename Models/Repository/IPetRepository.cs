@@ -11,5 +11,7 @@
         Task<Pet> AddPet(Pet pet);
 
         Task UpdatePet(Pet pet);
+
+        Task<List<Pet>> GetPetListWithRace();
     }
 }

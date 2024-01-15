@@ -52,5 +52,10 @@ namespace PetShopAPI.Models.Repository
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<List<Pet>> GetPetListWithRace()
+        {
+            return await _context.Pets.FromSql($"select a.Id,a.Name,b.Description AS Race,a.Color,a.Age,a.Weight,a.CreationDate from petshop..pets a inner join petshop..races b on a.Race=b.RaceId").ToListAsync();
+        }
     }
 }
