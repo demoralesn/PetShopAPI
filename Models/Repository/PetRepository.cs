@@ -44,8 +44,8 @@ namespace PetShopAPI.Models.Repository
             {
                 petCheck.Name = pet.Name;
                 petCheck.CreationDate = DateTime.Now;
-                petCheck.Color = pet.Color;
-                petCheck.Race = pet.Race;
+                petCheck.ColorId = pet.ColorId;
+                petCheck.RaceId = pet.RaceId;
                 petCheck.Age = pet.Age;
                 petCheck.Weight = pet.Weight;
 

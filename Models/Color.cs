@@ -1,8 +1,8 @@
-﻿namespace PetShopAPI.Models.DTO
+﻿namespace PetShopAPI.Models
 {
-    public class RaceDTO
+    public class Color
     {
-        public int RaceId { get; set; }
+        public int Id { get; set; }
         public string Description { get; set; }
         public bool IsActive { get; set; }
     }
