@@ -2,7 +2,7 @@
 {
     public class PetDTO
     {
-        public int Id { get; set; }
+        public int PetId { get; set; }
         public string Name { get; set; }
         public int RaceId { get; set; }
         public int ColorId { get; set; }

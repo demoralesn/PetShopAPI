@@ -37,6 +37,7 @@ namespace PetShopAPI.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError("Error calling Get method");
                 return BadRequest($"{ex.Message}");
             }
         }
@@ -56,6 +57,7 @@ namespace PetShopAPI.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError("Error calling GetPetListWithRace method");
                 return BadRequest($"{ex.Message}");
             }
         }
@@ -72,15 +74,18 @@ namespace PetShopAPI.Controllers
                 {
                     var petDto = _mapper.Map<PetDTO>(petDetails);
 
+                    _logger.LogInformation("Get by Id method called");
                     return Ok(petDto);
                 }
                 else
                 {
+                    _logger.LogWarning("Id not found in Get by Id method");
                     return NotFound();
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError("Error calling Get by Id method");
                 return BadRequest($"{ex.Message}");
             }
         }
@@ -98,15 +103,18 @@ namespace PetShopAPI.Controllers
                 {
                     await _petRepository.RemovePet(petCheck);
 
+                    _logger.LogInformation("Delete by Id method called");
                     return NoContent();
                 }
                 else
                 {
+                    _logger.LogWarning("Id not found in Delete by Id method");
                     return NotFound();
                 }
             }
             catch (Exception ex)
             {
+                _logger.LogError("Error calling Delete by Id method");
                 return BadRequest($"{ex.Message}");
             }
         }
@@ -123,10 +131,12 @@ namespace PetShopAPI.Controllers
 
                 var petSaved = _mapper.Map<PetDTO>(pet);
 
-                return CreatedAtAction("Get", new { id = pet.Id }, petSaved);
+                _logger.LogInformation("Add new pet method called");
+                return CreatedAtAction("Get", new { id = pet.PetId }, petSaved);
             }
             catch (Exception ex)
             {
+                _logger.LogError("Error calling Add new pet method");
                 return BadRequest($"{ex.Message}");
             }
         }
@@ -136,7 +146,7 @@ namespace PetShopAPI.Controllers
         {
             try
             {
-                if (id != petDto.Id)
+                if (id != petDto.PetId)
                 {
                     return BadRequest();
                 }
@@ -150,10 +160,12 @@ namespace PetShopAPI.Controllers
 
                         await _petRepository.UpdatePet(pet);
 
+                        _logger.LogInformation("Edit pet by Id method called");
                         return NoContent();
                     }
                     else
                     {
+                        _logger.LogWarning("Id not found in Edit pet by Id method");
                         return NotFound();
                     }
                     
@@ -161,6 +173,7 @@ namespace PetShopAPI.Controllers
             }
             catch (Exception ex)
             {
+                _logger.LogError("Error calling Edit pet by Id method");
                 return BadRequest($"{ex.Message}");
             }
         }

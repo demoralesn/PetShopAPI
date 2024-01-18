@@ -38,7 +38,7 @@ namespace PetShopAPI.Models.Repository
 
         public async Task UpdatePet(Pet pet)
         {
-            var petCheck = await _context.Pets.FirstOrDefaultAsync(x => x.Id == pet.Id);
+            var petCheck = await _context.Pets.FirstOrDefaultAsync(x => x.PetId == pet.PetId);
 
             if (petCheck != null)
             {
@@ -55,7 +55,7 @@ namespace PetShopAPI.Models.Repository
 
         public async Task<List<Pet>> GetPetListWithRace()
         {
-            return await _context.Pets.FromSql($"select a.Id,a.Name,b.Description AS Race,a.Color,a.Age,a.Weight,a.CreationDate from petshop..pets a inner join petshop..races b on a.Race=b.RaceId").ToListAsync();
+            return await _context.Pets.FromSql($"select a.Id,a.Name,b.Description AS RaceId,c.Description AS ColorId,a.Age,a.Weight,a.CreationDate,a.IsActive from petshop..Pets a inner join petshop..Races b on a.RaceId=b.Id inner join petshop..Colors c on a.ColorId=c.Id").ToListAsync();
         }
     }
 }
